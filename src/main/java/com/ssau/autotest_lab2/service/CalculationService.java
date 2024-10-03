@@ -91,5 +91,9 @@ public class CalculationService {
                 .processedAt(LocalDateTime.now())
                 .build();
     }
+
+    public CalculationDTO getLastCalculation() {
+        return calculationConverter.toDTO(calculationRepository.findLastCalculation());
+    }
 }
 
