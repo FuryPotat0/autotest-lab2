@@ -15,7 +15,6 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Calculation {
-
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "calculationSeqGen")
     @SequenceGenerator(name = "calculationSeqGen", sequenceName = "calculation_sequence", schema = "lab2", allocationSize = 1)
@@ -39,5 +38,19 @@ public class Calculation {
 
     @Column(name = "calculation_operation_type")
     private String operationType;
+
+    public Calculation(String firstNumber,
+                       String firstNumberRadix,
+                       String secondNumber,
+                       String secondNumberRadix,
+                       LocalDateTime processedAt,
+                       String operationType) {
+        this.firstNumber = firstNumber;
+        this.firstNumberRadix = firstNumberRadix;
+        this.secondNumber = secondNumber;
+        this.secondNumberRadix = secondNumberRadix;
+        this.processedAt = processedAt;
+        this.operationType = operationType;
+    }
 }
 
