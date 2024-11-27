@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @SpringBootTest(classes = AutotestLab2Application.class, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-class AutotestLab2ApplicationTests extends AuditVizualizationBaseTest {
+class AutotestLab2ApplicationTests extends BaseTestcontainers {
 
 	@Autowired
 	CalculationService calculationService;

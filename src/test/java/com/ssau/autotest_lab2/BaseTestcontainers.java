@@ -11,8 +11,12 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 
 @Testcontainers
 @ContextConfiguration
-@TestExecutionListeners({DependencyInjectionTestExecutionListener.class, SqlScriptsTestExecutionListener.class, FlywayTestExecutionListener.class})
-public abstract class AuditVizualizationBaseTest {
+@TestExecutionListeners({
+        DependencyInjectionTestExecutionListener.class,
+        SqlScriptsTestExecutionListener.class,
+        FlywayTestExecutionListener.class
+})
+public abstract class BaseTestcontainers {
     @Container
     protected static final PostgreSQLContainer POSTGRE_SQL_CONTAINER;
 
